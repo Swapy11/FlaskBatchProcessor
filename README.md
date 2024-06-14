@@ -41,4 +41,18 @@ curl -X POST   -H "Content-Type: application/json"   -d '{
       }'   http://127.0.0.1:5000/add
 ```
 
+Expected output:
+```
+{
+  "batchid": "id0101", 
+  "completed_at": "2024-06-14T13:56:50.797373", 
+  "response": [
+    19, 
+    12
+  ], 
+  "started_at": "2024-06-14T13:56:50.622659", 
+  "status": "complete"
+}
+```
+
 To validate and process batches of numbers, send a POST request to /validate with JSON data containing the batch ID and payload of numbers. The response will contain the batch ID, processed results, status, and timestamps.
